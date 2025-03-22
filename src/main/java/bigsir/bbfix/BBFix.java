@@ -34,4 +34,9 @@ public class BBFix implements ModInitializer, RecipeEntrypoint, GameStartEntrypo
 	public void afterGameStart() {
 
 	}
+
+	@SuppressWarnings("unchecked")
+	public static <T> T cast(Object o) {
+		return (T) o;
+	}
 }

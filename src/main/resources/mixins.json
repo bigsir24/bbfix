@@ -7,7 +7,9 @@
     "EntityMixin"
   ],
   "client": [
-    "EntityMixinClient"
+    "EntityMixinClient",
+    "EntityMixinClientUpdate",
+    "MobMixin"
   ],
   "injectors": {
     "defaultRequire": 1

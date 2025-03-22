@@ -38,17 +38,16 @@ public abstract class EntityMixin {
 	@Inject(method = "load", at = @At("TAIL"))
 	public void l(CompoundTag tag, CallbackInfo ci) {
 		ListTag bbTag = tag.getList("bb");
-		if(bbTag != null && bbTag.tagCount() == 6) {
-			this.bb.minX = ((DoubleTag)bbTag.tagAt(0)).getValue();
-			this.bb.minY = ((DoubleTag)bbTag.tagAt(1)).getValue();
-			this.bb.minZ = ((DoubleTag)bbTag.tagAt(2)).getValue();
-			this.bb.maxX = ((DoubleTag)bbTag.tagAt(3)).getValue();
-			this.bb.maxY = ((DoubleTag)bbTag.tagAt(4)).getValue();
-			this.bb.maxZ = ((DoubleTag)bbTag.tagAt(5)).getValue();
+		if (bbTag != null && bbTag.tagCount() == 6) {
+			this.bb.minX = ((DoubleTag) bbTag.tagAt(0)).getValue();
+			this.bb.minY = ((DoubleTag) bbTag.tagAt(1)).getValue();
+			this.bb.minZ = ((DoubleTag) bbTag.tagAt(2)).getValue();
+			this.bb.maxX = ((DoubleTag) bbTag.tagAt(3)).getValue();
+			this.bb.maxY = ((DoubleTag) bbTag.tagAt(4)).getValue();
+			this.bb.maxZ = ((DoubleTag) bbTag.tagAt(5)).getValue();
 		}
 		if (tag.containsKey("ho")) {
 			this.heightOffset = tag.getFloat("ho");
 		}
-
 	}
 }
